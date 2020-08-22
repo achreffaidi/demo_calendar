@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
 
   static CustomDay _generateDay(DateTime date) {
     var random = new Random();
-    return CustomDay(date,Activities(random.nextInt(5)));
+    return CustomDay(date,Activity(random.nextInt(5)));
   }
 
   Widget _dayItemBuilder(CustomDay day, int index) {
@@ -175,10 +175,10 @@ class _HomePageState extends State<HomePage> {
 
 }
 
-class Activities{
+class Activity{
   IconData icon;
   Color color;
-  Activities(int index){
+  Activity(int index){
     switch(index){
       case 0 : icon = Icons.directions_bike; color = Colors.pinkAccent; break ;
       case 1 : icon = Icons.style; color = Colors.blue; break ;
